@@ -84,7 +84,7 @@ void dehuffman(std::string filename) {
 		y |= get_bit(bits[16 + i], i, 16);
 	for (int i = 0; i < 3; i++)
 		badbits |= get_bit(bits[32 + i], 5 + i, 8);
-	bits.erase(bits.begin(), bits.begin() + 35);
+	bits.erase(bits.begin(), bits.end()+35);
 	file << x << " " << y;
 	tmps = "";
 	while (bits.size() != 0) {
